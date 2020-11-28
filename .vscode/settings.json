@@ -1,0 +1,12 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "D:\\ibrahimhocaPython\\SQL\\chinook\\chinook.db",
+            "name": "Sample",
+            "group": "1111"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
