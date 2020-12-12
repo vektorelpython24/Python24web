@@ -1,3 +1,4 @@
 from django.contrib import admin
+from blog.models import GonderiModel
 
-# Register your models here.
+admin.site.register(GonderiModel)
