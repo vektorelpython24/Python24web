@@ -1,2 +1,8 @@
-<h1>Merhaba</h1>
-<p>Buraya kadar geldim.</p>
+
+{% for gonderi in gonderis %}
+
+<h1>{{gonderi.baslik}}</h1>
+<p style="font-size:12px;color:#0000CC;font-style:Arial;">{{gonderi.yazi}}</p>
+{{gonderi.kayit_zaman}}
+
+{% endfor %}
