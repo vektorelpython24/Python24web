@@ -1,4 +1,6 @@
 from django.contrib import admin
-from .models import GonderiModel
+from blog.models import GonderiModel
+from deneme.models import DenemeModel
 
 admin.site.register(GonderiModel)
+admin.site.register(DenemeModel)
