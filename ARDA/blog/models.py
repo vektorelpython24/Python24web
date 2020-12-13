@@ -9,7 +9,11 @@ class GonderiModel(models.Model):
     kayit_zaman = models.DateTimeField(default=timezone.now,verbose_name="Kayıt Zamanı")
     yayim_tarihi = models.DateTimeField(null=True,blank=True,verbose_name="Yayım Zamanı")
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     telno=models.BigIntegerField(null=True,blank=True,verbose_name="Telefon Numarası")
+=======
+    no=models.IntegerField(null=True,blank=True,verbose_name="Telefon Numarası")
+>>>>>>> Stashed changes
 =======
     no=models.IntegerField(null=True,blank=True,verbose_name="Telefon Numarası")
 >>>>>>> Stashed changes
