@@ -18,5 +18,6 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include("blog.urls")),
+    path('blog/',include('blog.urls')),
+    path('',TemplateView.as_view(template_name="anasayfa.html")),
 ]
