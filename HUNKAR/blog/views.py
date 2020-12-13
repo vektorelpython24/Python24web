@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .model import GonderiModel
+from .models import GonderiModel
 
 def gonderiListe(request):
     gonderiler = GonderiModel.objects.all()

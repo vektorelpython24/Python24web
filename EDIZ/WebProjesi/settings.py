@@ -25,7 +25,7 @@ SECRET_KEY = '%%1p(e9768a_q6$of8ug5j@3sv*d)5aqjdi-q!nomi9#yk_bk('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1","localhost"]
+ALLOWED_HOSTS = ["127.0.0.1","localhost","192.168.0.14"]
 
 
 # Application definition
@@ -52,7 +52,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'WebProjesi.urls'
-import os
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
