@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import DenemeModel
+from deneme.models import DenemeModel
 
 def denemeListe(request):
     gonderiler = DenemeModel.objects.all()

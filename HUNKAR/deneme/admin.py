@@ -1,3 +1,4 @@
 from django.contrib import admin
+from deneme.models import DenemeModel
 
-# Register your models here.
+admin.site.register(DenemeModel)
