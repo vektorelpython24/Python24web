@@ -3,13 +3,11 @@ from django.utils import timezone
 
 class GonderiModel(models.Model):
     # yazar = models.ForeignKey('auth.user', on_delete=models.CASCADE)
-      
     baslik = models.CharField(max_length=200,verbose_name="Başlık")
     yazi = models.TextField(verbose_name="Yazı")
+    eposta = models.EmailField(verbose_name="E Posta",max_length=254,default="aa@aa.com")
     kayit_zaman = models.DateTimeField(default=timezone.now,verbose_name="Kayıt Zamanı")
     yayim_tarihi = models.DateTimeField(null=True,blank=True,verbose_name="Yayım Zamanı")
-    telno=models.BigIntegerField(null=True,blank=True,verbose_name="Telefon Numarası")
-    
     
 
     def yayimla(self):

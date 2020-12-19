@@ -1,3 +1,8 @@
+{% extends '../base.html' %}
+						{% block mesaj %}
+							<h1>Gönderi Listesi </h1>
+						{% endblock %}
+{% block icerik %}
 {% for gonderi in gonderis  %}
 
 <h1>{{gonderi.baslik}}</h1>
@@ -5,3 +10,4 @@
 {{gonderi.kayit_zaman}}
 
 {% endfor %}
+{% endblock %}
