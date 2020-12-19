@@ -121,6 +121,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILE_DIRS =[
-    BASE_DIR / 'static',
+    BASE_DIR / 'IBRAHIM/static',
  
 ]
