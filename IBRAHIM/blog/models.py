@@ -8,7 +8,7 @@ class GonderiModel(models.Model):
     eposta=models.EmailField(verbose_name="E-Mail", max_length=254,default="aa@aa.com")
     kayit_zaman = models.DateTimeField(default=timezone.now,verbose_name="Kayıt Zamanı")
     yayim_zaman = models.DateTimeField(null=True,blank=True,verbose_name="Yayım Zamanı")
-    telefonnno = models.BigIntegerField(verbose_name="Telefon numaranız",max_length=10,default="05000000000")
+    telefonnno = models.BigIntegerField(verbose_name="Telefon numaranız",default="05000000000")
 
     def yayimla(self):
         self.yayim_zaman = timezone.now()
