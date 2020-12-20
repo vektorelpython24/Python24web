@@ -30,9 +30,12 @@ ALLOWED_HOSTS = ["127.0.0.1","localhost","192.168.0.14"]
 
 # Application definition
 
+
+
+
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'django.contrib.auth',
+    'django.contrib.auth', # login için burayı kullanacağız
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -125,3 +128,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'

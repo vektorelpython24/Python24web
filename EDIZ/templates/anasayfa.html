@@ -1,7 +1,5 @@
 <!DOCTYPE HTML>
 {% load static %}
-
-
 <html>
 	<head>
 		<title>Vektorel Python 24 Web Projesi</title>
@@ -10,19 +8,23 @@
 		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
 	</head>
 	<body>
-
 		<!-- Header -->
 			<header id="header" class="alt">
 				<div class="logo"><a href="index.html">VEKTOREL</span></a></div>
 				<a href="#menu">Menu</a>
 			</header>
-
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="{% url 'anasayfa' %}">ANA SAYFA</a></li>
 					<li><a href="{% url 'gonderiListe' %}">YAZILAR</a></li>
-					<li><a href="{% url 'iletiListe' %}">ILETISIM</a></li>
+					<li><a href="{% url 'iletiListe' %}">İLETİŞİM</a></li>
+					{% if user.is_authenticated %}
+					<li><a href="#" >Merhaba {{user.username }}</a></li>
+					<li><a href="{% url 'logout' %}">Çıkış Yap</a></li>
+					{% else %}
+					<li><a href="{% url 'login' %}">GİRİŞ YAP</a></li>
+					{% endif %}
 				</ul>
 			</nav>
 

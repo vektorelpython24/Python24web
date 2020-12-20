@@ -1,0 +1,23 @@
+{% extends '../base.html' %}
+
+<h2>Giriş</h2>
+{% block banner %}
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<h2>Kullanıcı Girişi</h2>
+					</header>
+				</div>
+			</section>
+{% endblock banner %}
+{% block content %}
+<form method="post">
+  <div class="row.uniform">
+    <div class="6u">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Giriş Yap</button>
+    </div>
+  </div>
+</form>
+{% endblock content %}

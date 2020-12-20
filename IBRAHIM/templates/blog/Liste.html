@@ -1,13 +1,40 @@
-{% extends '../base.html' %}
-						{% block mesaj %}
-							<h1>Gönderi Listesi </h1>
-						{% endblock %}
-{% block icerik %}
-{% for gonderi in gonderis  %}
-
-<h1>{{gonderi.baslik}}</h1>
-<p style="font-size:25px;color:#0000CC;font-style:Arial-Black" > {{gonderi.yazi}} </p>
+{% extends "../base.html" %}
+{% load static %}
+{% block banner %}
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>Gönderi Listesi </p>
+						<h2>En Son Yazılar</h2>
+					</header>
+				</div>
+			</section>
+{% endblock banner %}
+{% block content %}
+<section id="two" class="wrapper style2">
+				<div class="inner">
+                {% for gonderi in gonderis  %}
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+                            
+								<p style="font-size:25px;color:#0000CC;font-style:Arial-Black" > {{gonderi.yazi}} </p>
 {{gonderi.kayit_zaman}}
+</p>
+								<h1>{{gonderi.baslik}}</h1>
+							</header>
+							
+						</div>
+					</div>
+                    {% endfor %}
+				</div>
+			</section>
 
-{% endfor %}
-{% endblock %}
+
+
+
+
+
+
+{% endblock content %}
