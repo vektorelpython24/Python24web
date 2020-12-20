@@ -1,34 +1,47 @@
 <!DOCTYPE HTML>
 {% load static %}
-
-
 <html>
 	<head>
-		<title>Örnek Web Sitesi</title>
+		<title>Vektorel Python 24 Web Projesi</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
 	</head>
 	<body>
-
 		<!-- Header -->
 			<header id="header" class="alt">
 				<div class="logo"><a href="index.html">VEKTOREL</span></a></div>
 				<a href="#menu">Menu</a>
 			</header>
-
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">Generic</a></li>
-					<li><a href="elements.html">Elements</a></li>
+					<li><a href="{% url 'anasayfa' %}">ANA SAYFA</a></li>
+					<li><a href="{% url 'gonderiListe' %}">YAZILAR</a></li>
+					<li><a href="{% url 'iletiListe' %}">İLETİŞİM</a></li>
+					{% if user.is_authenticated %}
+					<li><a href="#" >Merhaba {{user.username }}</a></li>
+					<li><a href="{% url 'logout' %}">Çıkış Yap</a></li>
+					{% else %}
+					<li><a href="{% url 'login' %}">GİRİŞ YAP</a></li>
+					{% endif %}
 				</ul>
 			</nav>
 
 		<!-- Banner -->
 			<section class="banner full">
-				<article>
+			{% for gonderi in gonderis  %}
+							<article>
+					<img src="{% static 'images/slide05.jpg' %}"  alt="" />
+					<div class="inner">
+						<header>
+							<p>{{gonderi.kayit_zaman}}</p>
+							<h2>{{gonderi.baslik}}</h2>
+						</header>
+					</div>
+				</article>
+ 			{% endfor %}
+				{% comment %} <article>
 					<img src="{% static 'images/slide01.jpg' %}" alt="" />
 					<div class="inner">
 						<header>
@@ -72,7 +85,7 @@
 							<h2>Lorem adipiscing</h2>
 						</header>
 					</div>
-				</article>
+				</article> {% endcomment %}
 			</section>
 
 		<!-- One -->
@@ -183,12 +196,6 @@
 			<script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
 			<script src="{% static 'js/skel.min.js' %}"></script>
 			<script src="{% static 'js/util.js' %}"></script>
-			<script src="{% static 'js/main.js' %}"></script>
-			<script src="{% static 'js/main.js' %}"></script>
-			<script src="{% static 'js/main.js' %}"></script>
-			<script src="{% static 'js/main.js' %}"></script>
-			<script src="{% static 'js/main.js' %}"></script>
-			<script src="{% static 'js/main.js' %}"></script>
 			<script src="{% static 'js/main.js' %}"></script>
 
 	</body>
