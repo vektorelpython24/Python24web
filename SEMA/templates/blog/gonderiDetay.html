@@ -19,6 +19,7 @@
           </p>
           <p>{{gonderi.kayit_zaman}}</p>
           <h1>{{gonderi.baslik}}</h1>
+          <a href="{% url 'gonderiDuzenle' pk=gonderi.pk  %}"> Düzenle </a>
           <a href="{% url 'gonderiListe' %}"> Tüm Gönderiler </a>
         </header>
       </div>

@@ -7,7 +7,7 @@
       <h2>En Son Yazılar</h2>
     </header>
   </div>
-</section>
+</section>    
 {% endblock banner %} {% block content %}
 <section id="two" class="wrapper style2">
   <div class="inner">
@@ -19,6 +19,9 @@
           </p>
           <p>{{gonderi.kayit_zaman}}</p>
           <h1>{{gonderi.baslik}}</h1>
+          {% if user.is_authenticated %}
+          <a href="{% url 'gonderiDuzenle' pk=gonderi.pk %}"> Düzenle</a>
+          {% endif %}
           <a href="{% url 'gonderiListe' %}"> Tüm Gönderiler </a>
         </header>
       </div>
