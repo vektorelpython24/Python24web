@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/',include("blog.urls")),
     path('iletisim/',include("iletisim.urls")),
+    path('account/',include('accounts.urls')),
     path('accounts/',include('django.contrib.auth.urls')),
     # path('',TemplateView.as_view(template_name="anasayfa.html")),
     path('',include("homepage.urls")),
