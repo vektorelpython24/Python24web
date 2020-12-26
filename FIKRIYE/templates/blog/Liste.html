@@ -12,7 +12,9 @@
 			</section>
 {% endblock banner %}
 {% block content %}
+<a href="{% url 'yeni_gonderi' %}">Yeni Gönderi</a>
 <section id="two" class="wrapper style2">
+
 				<div class="inner">
                 {% for gonderi in gonderis  %}
 					<div class="box">
